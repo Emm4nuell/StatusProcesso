@@ -1,0 +1,18 @@
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 9%;
+    background-image: linear-gradient(to right, #1c1c1c, #232323);
+}
+
+img{
+    height: 90%;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+    transform: scale(1) rotate(0deg);
+}

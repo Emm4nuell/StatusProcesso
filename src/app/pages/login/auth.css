@@ -1,0 +1,96 @@
+.auth{
+    margin: auto;
+    border: 2px solid #c1c1c1;
+    box-shadow: inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 500px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 0px;
+}
+
+.imagem{
+    width: 50%;
+    height: 100%;
+    background-color: #e8e8e8;
+}
+
+.imagem img{
+    width: 100%;
+}
+
+.img{
+    width: 100%;
+    text-align: center;
+}
+
+.img img{
+    width: 20%;
+    padding: 15px;
+}
+
+.acesso{
+    display: inline;
+    width: 50%;
+    padding: 20px;
+}
+
+form{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+.acesso form input{
+    font-size: 30px;
+}
+
+.esqueceuSenha{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox span{
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.checkbox input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.esqueceuSenha a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #00a5ef;
+}
+
+.botao{
+    text-align: center;
+}
+
+button{
+    border: none;
+    background-color: #00a5ef;
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    color: white;
+}
+
+button:hover{
+    background-color: #10b1fb;
+    cursor: pointer;
+}
