@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { api } from '../services/api/ApiConfig'
+import { api, getUsers } from '../services/api/ApiConfig'
 
 export const AuthContext = createContext();
 
@@ -14,13 +14,13 @@ export const AuthProvider = ({ children }) => {
 
     //Sempre que der update na pagina ela vai carregas o seguintes dados
     useEffect(() => {
-        const recoverUser = localStorage.getItem("user");
-        const token = localStorage.getItem("token");
+        const recoverUser = localStorage.getItem('user');
+        const token = localStorage.getItem('token');
 
         if (recoverUser && token) {
             setUser(JSON.parse(recoverUser))
-            api.defaults.headers.Authorization = `Bearer ${token}`;
-            console.log(api.defaults.headers.Authorization = `Bearer ${token}`)
+            api.defaults.headers.Authorization = "Bearer " + JSON.parse(token);
+            console.log(api.defaults.headers.Authorization = "Bearer " + JSON.parse(token));
         }
         setLoading(false);
 
@@ -31,7 +31,8 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem("user", JSON.stringify({ usuario, senha }));
         localStorage.setItem("token", JSON.stringify(token));
 
-        api.defaults.headers.Authorization = `Bearer ${token}`;
+        api.defaults.headers.Authorization = "Bearer " + token;
+        console.log("Token ao logar: " + token)
         setUser({ usuario, senha });
         navigate("home")
 

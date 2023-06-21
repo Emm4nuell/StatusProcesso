@@ -6,12 +6,22 @@ export const api = axios.create({
 
 
 
-export const createSession = async (cpf, senha) => {
-    console.log("Api: ", { cpf, senha })
-    return api.post("/auth", { cpf, senha });
+export const createSession = async (cpf, senha, token) => {
+    return api.post("/auth", { cpf, senha })
+        .then(response => {
+
+        })
+        .catch(error => {
+            console.log(error.response.data.message)
+        });
 }
 
 //Listar todos os dados do usuario
-export const getUsers = async () => {
+export const getUsers = async (token) => {
     return api.get("")
+        .then(response => {
+        })
+        .catch(error => {
+            console.log(error)
+        });
 }

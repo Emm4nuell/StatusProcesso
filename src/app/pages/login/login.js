@@ -22,7 +22,6 @@ export const Login = () => {
     const acessar = async (e) => {
         e.preventDefault();
         const response = await createSession(user.cpf, user.senha);
-        console.log("Token: ", response.data.token);
         login(user.cpf, user.senha, response.data.token)
     }
 
