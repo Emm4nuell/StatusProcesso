@@ -6,6 +6,7 @@ import Logo from '../../shared/components/img/logo.png'
 import { AuthContext, Context, ContextProvider } from "../../shared/contexts/Context";
 import { createSession } from "../../shared/services/api/ApiConfig";
 import axios from 'axios'
+import { useForkRef } from "@mui/material";
 
 
 
@@ -17,12 +18,14 @@ export const Login = () => {
         senha: ""
     });
 
-    const {authenticated, login} = useContext(AuthContext);
+
+    const { authenticated, login } = useContext(AuthContext);
 
     const acessar = async (e) => {
         e.preventDefault();
         const response = await createSession(user.cpf, user.senha);
         login(user.cpf, user.senha, response.data.token)
+
     }
 
     return (
